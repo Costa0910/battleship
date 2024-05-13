@@ -7,6 +7,101 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <script src="main.js"></script>
+    <h1>BattleShip</h1>
+    <!-- (5x5 grid) -->
+
+    <div class="get-player-info">
+      <h2>Please place your ships position and Players name!</h2>
+      <p>Ex. A1,B2,C4,D3,E5 etc...</p>
+      <form id="player-info">
+        <!-- Player 1 Info -->
+        <div class="player1-info player">
+          <div>
+            <label for="player1-name">Player 1 Name:</label>
+            <input
+              type="text"
+              id="player1-name"
+              name="player1-name"
+              required
+              aria-label="Player 1 name"
+            />
+          </div>
+          <div>
+            <label for="player1-ships">ships positions:</label>
+            <input
+              type="text"
+              id="player1-ships"
+              name="player1-ships"
+              placeholder="A3, B4, C2, D4, E1"
+              required
+            />
+          </div>
+        </div>
+        <hr />
+
+        <!-- Player 2 Info -->
+        <div class="player2-info player">
+          <div>
+            <label for="player2-name">Player 2 Name:</label>
+            <input
+              type="text"
+              id="player2-name"
+              name="player2-name"
+              aria-label="Player 2 name"
+              required
+            />
+          </div>
+          <div>
+            <label for="player2-ships">ships positions:</label>
+            <input
+              type="text"
+              id="player2-ships"
+              name="player2-ships"
+              placeholder="A1, B2, C3, D4, E5"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit">Play</button>
+      </form>
+    </div>
+    <div class="grid-display">
+      <div class="grid-row">
+        <div class="grid-cell" data-x="A" data-y="1">A</div>
+        <div class="grid-cell" data-x="A" data-y="2"></div>
+        <div class="grid-cell" data-x="A" data-y="3"></div>
+        <div class="grid-cell" data-x="A" data-y="4"></div>
+        <div class="grid-cell" data-x="A" data-y="5"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell" data-x="B" data-y="1">B</div>
+        <div class="grid-cell" data-x="B" data-y="2"></div>
+        <div class="grid-cell" data-x="B" data-y="3"></div>
+        <div class="grid-cell" data-x="B" data-y="4"></div>
+        <div class="grid-cell" data-x="B" data-y="5"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell" data-x="C" data-y="1">C</div>
+        <div class="grid-cell" data-x="C" data-y="2"></div>
+        <div class="grid-cell" data-x="C" data-y="3"></div>
+        <div class="grid-cell" data-x="C" data-y="4"></div>
+        <div class="grid-cell" data-x="C" data-y="5"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell" data-x="D" data-y="1"></div>
+        <div class="grid-cell" data-x="D" data-y="2"></div>
+        <div class="grid-cell" data-x="D" data-y="3"></div>
+        <div class="grid-cell" data-x="D" data-y="4"></div>
+        <div class="grid-cell" data-x="D" data-y="5">D</div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell" data-x="E" data-y="1"></div>
+        <div class="grid-cell" data-x="E" data-y="2"></div>
+        <div class="grid-cell" data-x="E" data-y="3"></div>
+        <div class="grid-cell" data-x="E" data-y="4"></div>
+        <div class="grid-cell" data-x="E" data-y="5">E</div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BattleShip</title>
+    <title>BattleShip Game</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <h1>BattleShip</h1>
     <!-- (5x5 grid) -->
+    <!-- Info for players -->
+    <p class="show-player"></p>
 
-    <section class="get-player-info">
+    <section class="get-player-info" id="playersBox">
       <div class="get-player-info-details">
         <h2>Please place your ships position and Players name!</h2>
         <p>Ex. A1,B2,C4,D3,E5 etc...</p>
@@ -67,7 +69,7 @@
         </form>
       </div>
     </section>
-    <div class="grid-display">
+    <section class="grid-display">
       <div class="grid-row">
         <div class="grid-cell" data-x="A" data-y="1">A</div>
         <div class="grid-cell" data-x="A" data-y="2"></div>
@@ -103,7 +105,10 @@
         <div class="grid-cell" data-x="E" data-y="4"></div>
         <div class="grid-cell" data-x="E" data-y="5">E</div>
       </div>
-    </div>
+    </section>
+    <section id="startOver">
+      <button type="button">Start Over</button>
+    </section>
     <script type="module" src="main.js"></script>
   </body>
 </html>

@@ -21,15 +21,20 @@ h1 {
 
 .grid-display {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .grid-cell {
   width: 110px;
   height: 110px;
-  margin: 5px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -41,66 +46,12 @@ h1 {
 /* Get players info */
 .get-player-info {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-form input:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-form button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-.player1-info,
-.player2-info {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-/* get-player-info: hide game cell and wait for to place ships and starts the game */
-.get-player-info.hide {
-  display: none;
-}
-
-.get-player-info.show {
-  display: block;
-}
-
-.get-player-info {
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  border: 1px solid #ccc;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -114,8 +65,100 @@ form button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* get-player-info: hide game cell and wait for to place ships and starts the game*/
+.get-player-info.hide {
+  display: none;
+}
+
+.get-player-info.show {
+  display: block;
+}
+.get-player-info-details {
+  width: 40%;
+}
+
+.get-player-info-details form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.player1-info,
+.player2-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.get-player-info-details input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.get-player-info-details input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.get-player-info-details button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.get-player-info-details button:hover {
+  background-color: #0056b3;
+}
+
 /* Indicate user example of valid input */
 .get-player-info-details p {
   font-size: 18px;
+  color: #007bff;
+}
+
+/* Game status */
+.show-player {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* start over */
+#startOver {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startOver button {
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#startOver button:hover {
+  background-color: #0056b3;
+}
+
+/* Style MISS AND HIT CELL */
+.miss {
+  background-color: #f8d7da;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.hit {
+  background-color: #d4edda;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style p that show info to user */
+.show-player {
+  font-size: 20px;
   color: #007bff;
 }

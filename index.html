@@ -10,61 +10,63 @@
     <h1>BattleShip</h1>
     <!-- (5x5 grid) -->
 
-    <div class="get-player-info">
-      <h2>Please place your ships position and Players name!</h2>
-      <p>Ex. A1,B2,C4,D3,E5 etc...</p>
-      <form id="player-info">
-        <!-- Player 1 Info -->
-        <div class="player1-info player">
-          <div>
-            <label for="player1-name">Player 1 Name:</label>
-            <input
-              type="text"
-              id="player1-name"
-              name="player1-name"
-              required
-              aria-label="Player 1 name"
-            />
+    <section class="get-player-info">
+      <div class="get-player-info-details">
+        <h2>Please place your ships position and Players name!</h2>
+        <p>Ex. A1,B2,C4,D3,E5 etc...</p>
+        <form id="player-info">
+          <!-- Player 1 Info -->
+          <div class="player1-info player">
+            <div>
+              <label for="player1-name">Player 1 Name:</label>
+              <input
+                type="text"
+                id="player1-name"
+                name="player1-name"
+                required
+                aria-label="Player 1 name"
+              />
+            </div>
+            <div>
+              <label for="player1-ships">ships positions:</label>
+              <input
+                type="text"
+                id="player1-ships"
+                name="player1-ships"
+                placeholder="A3, B4, C2, D4, E1"
+                required
+              />
+            </div>
           </div>
-          <div>
-            <label for="player1-ships">ships positions:</label>
-            <input
-              type="text"
-              id="player1-ships"
-              name="player1-ships"
-              placeholder="A3, B4, C2, D4, E1"
-              required
-            />
-          </div>
-        </div>
-        <hr />
+          <hr />
 
-        <!-- Player 2 Info -->
-        <div class="player2-info player">
-          <div>
-            <label for="player2-name">Player 2 Name:</label>
-            <input
-              type="text"
-              id="player2-name"
-              name="player2-name"
-              aria-label="Player 2 name"
-              required
-            />
+          <!-- Player 2 Info -->
+          <div class="player2-info player">
+            <div>
+              <label for="player2-name">Player 2 Name:</label>
+              <input
+                type="text"
+                id="player2-name"
+                name="player2-name"
+                aria-label="Player 2 name"
+                required
+              />
+            </div>
+            <div>
+              <label for="player2-ships">ships positions:</label>
+              <input
+                type="text"
+                id="player2-ships"
+                name="player2-ships"
+                placeholder="A1, B2, C3, D4, E5"
+                required
+              />
+            </div>
           </div>
-          <div>
-            <label for="player2-ships">ships positions:</label>
-            <input
-              type="text"
-              id="player2-ships"
-              name="player2-ships"
-              placeholder="A1, B2, C3, D4, E5"
-              required
-            />
-          </div>
-        </div>
-        <button type="submit">Play</button>
-      </form>
-    </div>
+          <button type="submit">Play</button>
+        </form>
+      </div>
+    </section>
     <div class="grid-display">
       <div class="grid-row">
         <div class="grid-cell" data-x="A" data-y="1">A</div>

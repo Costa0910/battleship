@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
     );
     const battleShipGame = new BattleShipGame(player1, player2);
     battleShipGame.startGame();
-    playerInfoBox.style.display = "none";
+    playerInfoBox.style.classList.add("hide");
   } else {
     alert(`Please enter valid input. Make sure this criteria are met:
     1. Player names and ships are not empty.

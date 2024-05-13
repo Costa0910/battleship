@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  position: relative;
+}
+
 body {
-  width: 80%;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
-  margin: 0 auto;
-  position: relative;
 }
 
 h1 {
@@ -42,7 +44,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -65,10 +66,6 @@ form input:focus {
   border-color: #007bff;
 }
 
-/* form label {
-  font-weight: bold;
-  display: block;
-} */
 form button {
   padding: 10px;
   background-color: #007bff;
@@ -86,4 +83,39 @@ form button:hover {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/* get-player-info: hide game cell and wait for to place ships and starts the game */
+.get-player-info.hide {
+  display: none;
+}
+
+.get-player-info.show {
+  display: block;
+}
+
+.get-player-info {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* details placement */
+.get-player-info-details {
+  width: 40%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Indicate user example of valid input */
+.get-player-info-details p {
+  font-size: 18px;
+  color: #007bff;
 }

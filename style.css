@@ -10,13 +10,24 @@ html {
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #043564;
   font-family: Arial, sans-serif;
+  color: #fff;
 }
 
 h1 {
   text-align: center;
   margin-top: 20px;
+  /* style h1 */
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .grid-display {
@@ -116,7 +127,6 @@ h1 {
 /* Indicate user example of valid input */
 .get-player-info-details p {
   font-size: 18px;
-  color: #007bff;
 }
 
 /* Game status */
@@ -152,7 +162,9 @@ h1 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.hit {
+.hit,
+/* Show all ships winner sunk */
+.sunk {
   background: url("./img/sunk.gif");
   background-size: cover;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -161,5 +173,5 @@ h1 {
 /* Style p that show info to user */
 .show-player {
   font-size: 20px;
-  color: #007bff;
+  color: #00ff73;
 }

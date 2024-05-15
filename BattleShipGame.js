@@ -94,7 +94,19 @@ class BattleShipGame {
     if (this.gameOver) {
       const showPlayer = document.querySelector(".show-player");
       showPlayer.textContent = `${this.currentPlayer.name} wins. Congratulations!`;
+      this.shipsTheWinnerSunk();
     }
+  }
+
+  shipsTheWinnerSunk() {
+    const winnerSunkShips = this.otherPlayer.sunkShips;
+
+    winnerSunkShips.forEach((cell) => {
+      const sunkCell = document.querySelector(
+        `[data-x="${cell[0]}"][data-y="${cell[1]}"]`
+      );
+      sunkCell.classList.add("sunk");
+    });
   }
 }
 

@@ -12,6 +12,10 @@ const player2Name = document.getElementById("player2-name");
 const player1Ships = document.getElementById("player1-ships");
 const player2Ships = document.getElementById("player2-ships");
 
+particlesJS.load("particles-js", "particles.json", function () {
+  console.log("callback - particles-js config loaded");
+});
+
 // Event listener for the form submission
 form.addEventListener("submit", (event) => {
   event.preventDefault();

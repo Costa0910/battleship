@@ -86,3 +86,9 @@ function checkUserInput() {
   // If all the conditions are met, return true
   return true;
 }
+
+// Start the game Over again
+const restartButton = document.getElementById("startOver");
+restartButton.addEventListener("click", () => {
+  location.reload();
+});

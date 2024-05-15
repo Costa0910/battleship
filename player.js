@@ -11,7 +11,6 @@ class Player {
   // Function to check if the cell clicked is a hit or a miss
   checkHitOrMiss(position) {
     const hit = this.ships.includes(position);
-    // console.log(hit, position, this.ships);
     return hit;
   }
 

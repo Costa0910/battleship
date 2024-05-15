@@ -59,7 +59,7 @@ class BattleShipGame {
     setTimeout(() => {
       cell.classList.remove(result);
       cell.textContent = "";
-    }, 1000);
+    }, 1500);
   }
 
   switchPlayers() {

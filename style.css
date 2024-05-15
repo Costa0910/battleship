@@ -72,6 +72,7 @@ h1 {
   width: 40%;
   padding: 20px;
   background-color: #fff;
+  color: #000;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -160,6 +161,8 @@ h1 {
 .miss {
   background-color: #f8d7da;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: #721c24;
 }
 
 .hit,
@@ -168,10 +171,30 @@ h1 {
   background: url("./img/sunk.gif");
   background-size: cover;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: #721c24;
 }
 
 /* Style p that show info to user */
 .show-player {
+  text-align: center;
   font-size: 20px;
   color: #00ff73;
+}
+
+/* WINNER TEXT STYLE */
+.winner {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    to right top,
+    #20b2aa,
+    #ff69b4,
+    #87cefa,
+    #ff8c00
+  );
+  -webkit-background-clip: linear-gradient(to right, #ff69b4, #87cefa, #20b2aa);
+  background-clip: text;
+  font-size: 30px;
+  font-weight: bold;
+  color: transparent;
 }

@@ -29,7 +29,6 @@ class Player {
   hit(position) {
     const sunkShipIndex = this.ships.findIndex((ship) => ship === position);
 
-    console.log(sunkShipIndex, this.ships, position);
     if (sunkShipIndex !== -1) {
       const sunkShip = this.ships.splice(sunkShipIndex, 1);
       this.hits += 1;

@@ -53,7 +53,7 @@ class BattleShipGame {
     cell.classList.add(result);
 
     // Add cell text to show the result
-    cell.textContent = result.toUpperCase();
+    cell.textContent = result.toUpperCase() + ": " + cellPosition.toUpperCase();
 
     // Remove the class after 1 second to show the result
     setTimeout(() => {
@@ -107,6 +107,9 @@ class BattleShipGame {
       );
       sunkCell.classList.add("sunk");
     });
+
+    const showPlayer = document.querySelector(".show-player");
+    showPlayer.classList.add("winner");
   }
 }
 

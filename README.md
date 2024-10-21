@@ -1,9 +1,5 @@
 # BattleShip Web Version Game
 
-## Introduction
-
-Welcome to the sample BattleShip web version game! This classic two-player game challenges players to strategically place their ships on a grid and attempt to sink their opponent's fleet.
-
 ## Gameplay
 
 1. **Two Player Game**: This game consists of two players.
